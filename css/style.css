@@ -1,0 +1,434 @@
+/* Variáveis de cores e estilos */
+:root {
+    --twitch-purple: #9146FF;
+    --twitch-dark: #0E0E10;
+    --twitch-light: #EFEFF1;
+    --twitch-gray: #18181B;
+    --white: #FFFFFF;
+    --black: #000000;
+}
+
+/* Reset e estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--twitch-dark);
+    color: var(--twitch-light);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: var(--twitch-purple);
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--white);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header e Navegação */
+header {
+    background-color: var(--twitch-gray);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo h1 {
+    color: var(--twitch-purple);
+    font-size: 1.8rem;
+    margin-left: 10px;
+}
+
+.logo-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--twitch-purple);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: var(--twitch-light);
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    background-color: var(--twitch-purple);
+    color: var(--white);
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--twitch-light);
+}
+
+/* Seções comuns */
+section {
+    padding: 60px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--twitch-purple);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: var(--twitch-purple);
+    margin: 10px auto;
+}
+
+/* Home Hero Section */
+#home {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: var(--white);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--twitch-purple);
+    color: var(--white);
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--white);
+    color: var(--twitch-purple);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Destaques Section */
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.highlight-card {
+    background-color: var(--twitch-gray);
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.highlight-card:hover {
+    transform: translateY(-10px);
+}
+
+.highlight-icon {
+    font-size: 2.5rem;
+    color: var(--twitch-purple);
+    margin-bottom: 20px;
+}
+
+.highlight-card h3 {
+    margin-bottom: 15px;
+    color: var(--twitch-purple);
+}
+
+/* Próximas Transmissões Section */
+.streams-list {
+    background-color: var(--twitch-gray);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.stream-item {
+    display: flex;
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stream-item:last-child {
+    border-bottom: none;
+}
+
+.stream-date {
+    min-width: 100px;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.stream-date .day {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--twitch-purple);
+}
+
+.stream-date .time {
+    display: block;
+    font-size: 1.1rem;
+}
+
+.stream-info h3 {
+    margin-bottom: 10px;
+    color: var(--twitch-purple);
+}
+
+/* Sobre Section */
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-text h3 {
+    margin: 25px 0 15px;
+    color: var(--twitch-purple);
+}
+
+.about-text ul {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.about-text li {
+    margin-bottom: 10px;
+}
+
+.about-image {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+}
+
+.school-info {
+    background-color: var(--twitch-gray);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.school-info h4 {
+    color: var(--twitch-purple);
+    margin-bottom: 15px;
+}
+
+.school-info p {
+    margin-bottom: 10px;
+}
+
+/* Jogos Section */
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.game-card {
+    background-color: var(--twitch-gray);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.game-card:hover {
+    transform: translateY(-10px);
+}
+
+.game-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.game-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.game-card:hover .game-image img {
+    transform: scale(1.1);
+}
+
+.game-info {
+    padding: 20px;
+}
+
+.game-info h3 {
+    margin-bottom: 10px;
+    color: var(--twitch-purple);
+}
+
+.game-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-value {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--twitch-purple);
+}
+
+.stat-label {
+    font-size: 0.9rem;
+}
+
+/* Outros Jogos Section */
+.other-games-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.other-game-item {
+    background-color: var(--twitch-gray);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.other-game-item h3 {
+    color: var(--twitch-purple);
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--twitch-gray);
+    padding: 40px 0 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    color: var(--twitch-purple);
+    margin-bottom: 20px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--twitch-purple);
+    color: var(--white);
+    transition: all 0.3s;
+}
+
+.social-links a:hover {
+    background-color: var(--white);
+    color: var(--twitch-purple);
+    transform: translateY(-5px);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+}
