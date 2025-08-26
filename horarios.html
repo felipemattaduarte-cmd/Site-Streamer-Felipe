@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horários - Felipe Streams</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header com navegação -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <div class="logo-img">F</div>
+                <h1>Felipe Streams</h1>
+            </div>
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav>
+                <ul id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="jogos.html">Jogos</a></li>
+                    <li><a href="horarios.html" class="active">Horários</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Horários Section -->
+    <section id="schedule">
+        <div class="container">
+            <h2 class="section-title">Horários das Gameplays</h2>
+            <div class="schedule-container">
+                <div class="schedule-item">
+                    <span class="schedule-day">Segunda-feira</span>
+                    <span class="schedule-time">19:00 - 22:00</span>
+                    <span class="schedule-game">CS2 - Competitivo</span>
+                </div>
+                <div class="schedule-item">
+                    <span class="schedule-day">Terça-feira</span>
+                    <span class="schedule-time">18:00 - 21:00</span>
+                    <span class="schedule-game">Roblox - Diversos</span>
+                </div>
+                <div class="schedule-item">
+                    <span class="schedule-day">Quarta-feira</span>
+                    <span class="schedule-time">19:00 - 22:00</span>
+                    <span class="schedule-game">GTA5 - Modo Online</span>
+                </div>
+                <div class="schedule-item">
+                    <span class="schedule-day">Quinta-feira</span>
+                    <span class="schedule-time">18:00 - 21:00</span>
+                    <span class="schedule-game">Jogos da Comunidade</span>
+                </div>
+                <div class="schedule-item">
+                    <span class="schedule-day">Sexta-feira</span>
+                    <span class="schedule-time">20:00 - 23:00</span>
+                    <span class="schedule-game">Roblox - Competitivo</span>
+                </div>
+                <div class="schedule-item">
+                    <span class="schedule-day">Sábado</span>
+                    <span class="schedule-time">15:00 - 19:00</span>
+                    <span class="schedule-game">Variados - Especial Fim de Semana</span>
+                </div>
+                <div class="schedule-item">
+                    <span class="schedule-day">Domingo</span>
+                    <span class="schedule-time">16:00 - 20:00</span>
+                    <span class="schedule-game">Replays e Melhores Momentos</span>
+                </div>
+            </div>
+
+            <div class="schedule-notes">
+                <h3>Observações</h3>
+                <p>Os horários podem sofrer alterações devido a compromissos escolares. Todas as changes serão avisadas com antecedência nas redes sociais.</p>
+                <p>Eventos especiais podem ocorrer fora desses horários. Fiquem atentos às novidades!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calendário Section -->
+    <section id="calendar">
+        <div class="container">
+            <h2 class="section-title">Calendário de Eventos</h2>
+            <div class="calendar-container">
+                <div class="month-nav">
+                    <button id="prevMonth"><i class="fas fa-chevron-left"></i></button>
+                    <h3 id="currentMonth">Junho 2023</h3>
+                    <button id="nextMonth"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="calendar" id="calendar">
+                    <!-- O calendário será gerado via JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Felipe Streams</h3>
+                    <p>Transmitindo diversão e entretenimento através de games!</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Links Rápidos</h3>
+                    <p><a href="index.html">Home</a></p>
+                    <p><a href="sobre.html">Sobre</a></p>
+                    <p><a href="horarios.html">Horários</a></p>
+                    <p><a href="contato.html">Contato</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Redes Sociais</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitch"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Felipe Streams. Desenvolvido como parte do projeto do Colégio Estadual Professor Ricardo Lunardelli.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/calendar.js"></script>
+</body>
+</html>
